@@ -26,12 +26,14 @@
     <Resource Language="x-generate"/>
   </Resources>
 
+	
   <Applications>
+
     <Application Id="App"
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="Package"
+        DisplayName="PackageFull"
         Description="Package"
         BackgroundColor="transparent"
         Square150x150Logo="Images\Square150x150Logo.png"
@@ -40,7 +42,7 @@
         <uap:SplashScreen Image="Images\SplashScreen.png" />
       </uap:VisualElements>
       <Extensions>
-        <uap:Extension Category="windows.protocol" EntryPoint="windows.fullTrustApplication" Executable="Settings\Settings.exe">
+        <uap:Extension Category="windows.protocol" Executable="Settings\Settings.exe" EntryPoint="windows.FullTrustApplication">
           <uap:Protocol Name="settings"/>
         </uap:Extension>
       </Extensions>
@@ -48,7 +50,6 @@
   </Applications>
 
   <Capabilities>
-    <Capability Name="internetClient" />
     <rescap:Capability Name="runFullTrust" />
   </Capabilities>
 </Package>

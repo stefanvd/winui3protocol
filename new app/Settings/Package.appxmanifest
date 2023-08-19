@@ -30,7 +30,7 @@
   </Resources>
 
   <Applications>
-    <Application Id="App"
+    <Application Id="Settings"
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
@@ -43,7 +43,7 @@
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
       <Extensions>
-        <uap:Extension Category="windows.protocol">
+        <uap:Extension Category="windows.protocol" Executable="Settings.exe" EntryPoint="windows.fullTrustApplication">
           <uap:Protocol Name="settings"/>
         </uap:Extension>
       </Extensions>
